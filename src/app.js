@@ -18,16 +18,15 @@ class Repo{
     this.likes = 0;
   }
 
-  update(body){
-    const obj = body;
-    if(obj?.title){
-      this.title = body.title;
+  update({title, url, techs}){
+    if(title){
+      this.title = title;
     }
-    if(obj?.url){
-      this.url = body.url;
+    if(url){
+      this.url = url;
     }
-    if(obj?.techs){
-      this.techs = body.techs;
+    if(techs){
+      this.techs = techs;
     }
   }
 
